@@ -41,6 +41,5 @@ class MainActivity : AppCompatActivity() {
             heroAdapter = HeroAdapter(it)
             groupAdapter.add(heroAdapter)
         }
-        heroAdapter.context = this
     }
 }
