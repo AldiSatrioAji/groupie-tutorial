@@ -11,6 +11,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private var groupAdapter = GroupAdapter<ViewHolder>()
+    private lateinit var heroAdapter: HeroAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,9 +39,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         listHeroes.map {
-            groupAdapter.add(HeroI)
+            heroAdapter = HeroAdapter(it)
+            groupAdapter.add(heroAdapter)
         }
-
-
+        heroAdapter.context = this
     }
 }
