@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
     private var groupAdapter = GroupAdapter<ViewHolder>()
     private lateinit var heroAdapter: HeroAdapter
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
